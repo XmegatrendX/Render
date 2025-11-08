@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: smartmoney-bot
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn smartmoney_bot:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: BOT_TOKEN
+        sync: false   # введёшь вручную
+      - key: RAILWAY_STATIC_URL
+        value: YOUR_RENDER_URL_WITHOUT_HTTPS  # потом заменишь
