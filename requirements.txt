@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-telegram-bot==20.8
+yfinance
+pandas
+numpy
+matplotlib
+aiohttp
